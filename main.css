@@ -1,0 +1,40 @@
+:root {
+    --main-bg-color: #FFBE85;
+    --main-header-color: #2A1FFF;
+    --second-heading-color: #9619EB;
+}
+
+h1 {
+    color: var(--main-header-color);
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+h2,
+h3 {
+    color: var(--second-heading-color);
+}
+
+#page {
+    display: grid;
+    grid-template-areas:
+        "head main"
+        "nav main"
+        "nav main";
+    grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 150px 1fr;
+}
+
+#page > header{
+    grid-area: head;
+}
+
+#page > nav {
+    grid-area: nav;
+}
+
+#page > main{
+    grid-area: main;
+}
